@@ -14,7 +14,7 @@ A simple and fun React-based Meme Generator that lets you:
 ## 🌐 Deployment
 
 You can access the live deployed version here:
-https://your-deployment-link.com
+https://meme-generator-binoy.vercel.app/
 
 ## 🙌 Acknowledgements
 
