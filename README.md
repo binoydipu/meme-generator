@@ -1,16 +1,23 @@
-# React + Vite
+# 🎭 Meme Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and fun React-based Meme Generator that lets you:
+- Fetch random meme templates from the **Imgflip API**
+- Add **top** and **bottom** text to memes
+- Preview memes instantly
+- Save memes as PNG images using **html2canvas**
 
-Currently, two official plugins are available:
+## 🛠 Tech Stack
+- [React](https://reactjs.org/) – Frontend framework
+- [html2canvas](https://html2canvas.hertzen.com/) – Convert meme DOM to an image
+- [Imgflip API](https://api.imgflip.com/) – Meme templates
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Deployment
 
-## React Compiler
+You can access the live deployed version here:
+https://your-deployment-link.com
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🙌 Acknowledgements
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Imgflip API](https://api.imgflip.com/) for meme templates
+- [html2canvas](https://html2canvas.hertzen.com/) for image capture
+- [FreeCodeCamp](https://www.freecodecamp.org/) for React tutorial guidance and inspiration 🎉

@@ -16,7 +16,7 @@ const Main = () => {
   const [meme, setMeme] = useState({
     topText: "One does not simply",
     bottomText: "Walk into Mordor",
-    imageUrl: ""
+    imageUrl: "https://i.imgflip.com/1bij.jpg"
   })
 
   const memeRef = useRef(null)
