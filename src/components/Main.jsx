@@ -28,13 +28,13 @@ const Main = () => {
       .then(res => res.json())
       .then(data => setAllMemes(data.data.memes))
     
-    const defaultImg = "http://i.imgflip.com/1bij.jpg";
+    const defaultImg = "http://i.imgflip.com/1bij.jpg"
     convertToBase64(defaultImg).then(base64Img => {
       setMeme(prev => ({
         ...prev,
         imageUrl: base64Img
-      }));
-    });
+      }))
+    })
   }, [])
 
   const handleChange = (event) => {
@@ -51,7 +51,7 @@ const Main = () => {
     const randomNumber = Math.floor(Math.random() * allMemes.length)
     const newMemeUrl = allMemes[randomNumber].url
 
-    const base64Img = await convertToBase64(newMemeUrl);
+    const base64Img = await convertToBase64(newMemeUrl)
 
     setMeme(prevMeme => {
       return {
@@ -61,14 +61,25 @@ const Main = () => {
     })
   }
 
-  const saveMeme = () => {
-    html2canvas(memeRef.current).then(canvas => {
-      const link = document.createElement("a")
-      link.download = "meme.png"
-      link.href = canvas.toDataURL("image/png")
-      link.click()
-    })
+  const saveMeme = async () => {
+    const imgEl = memeRef.current.querySelector("img")
+    if (imgEl) {
+      const base64Img = await convertToBase64(imgEl.src)
+
+      const originalSrc = imgEl.src
+      imgEl.src = base64Img
+
+      html2canvas(memeRef.current).then(canvas => {
+        const link = document.createElement("a")
+        link.download = "meme.png"
+        link.href = canvas.toDataURL("image/png")
+        link.click()
+
+        imgEl.src = originalSrc
+      })
+    }
   }
+
 
   return (
     <main>
